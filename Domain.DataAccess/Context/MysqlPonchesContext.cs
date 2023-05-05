@@ -30,9 +30,6 @@ public partial class MysqlPonchesContext : DbContext
 
     public virtual DbSet<UsuariosRole> UsuariosRoles { get; set; }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseMySQL("server=localhost;database=ponches_api_rest;user=root;password=Mosquea42510");
-
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Credenciale>(entity =>
